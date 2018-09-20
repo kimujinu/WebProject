@@ -3,6 +3,7 @@ package exBean;
 public class studentVO {
 		private String no;
 		private String name;
+		
 		public String getNo() {
 			return no;
 		}
