@@ -1,5 +1,4 @@
- 
-package exBean;
+ package exBean;
 
 import java.sql.*;
 import java.util.ArrayList;
@@ -12,13 +11,10 @@ public class studentDAO {
   Class.forName("oracle.jdbc.driver.OracleDriver");
   Connection conn = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:xe","201412368","201412368");
   
-
   PreparedStatement pstmt = conn.prepareStatement("insert into student values(?,?)");
   pstmt.setString(1,no);
   pstmt.setString(2,name);
   pstmt.executeUpdate();
-  
-  
 
   pstmt.close();
   conn.close();
@@ -46,3 +42,6 @@ public class studentDAO {
 	   return items;
 	 }
 }
+
+
+
