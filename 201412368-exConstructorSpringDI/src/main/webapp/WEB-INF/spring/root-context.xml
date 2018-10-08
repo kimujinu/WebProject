@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+	
+	<!-- Root Context: defines shared resources visible to all other web components -->
+	<bean id="classA" class="kr.ac.dit.ClassA"/>
+ 	<bean id="classB" class="kr.ac.dit.ClassB">
+ 	 <constructor-arg ref="classA"/>
+ </bean>
+	<!--Spring은 자바와 달리 여기에 적으면 객체생성이 됨-->	
+</beans>
